@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    </head>
+    <body>
+        <input id="1" type="text">number 1</input>
+        <input id="2" type="text">number 2</input>
+        <button onclick="add()">+</button>
+        <button onclick="minus()">-</button>
+        <button onclick="mutiply()">*</button>
+        <button onclick="divide()">/</button>
+        <button onclick="remainder()">%</button>
+    </body>
+    <script>
+        function add(){axios.post('http://localhost:3000/calculator/add',{
+            num1: document.getElementById('1').value,
+            num2: document.getElementById('2').value
+        })
+    .then((response) => {
+        console.log(response.data)
+    })
+    }
+        function minus(){axios.post('http://localhost:3000/calculator/add/minus',{
+            num1: document.getElementById('1').value,
+            num2: document.getElementById('2').value
+        })
+        .then((response) => {
+        console.log(response.data)
+    })
+    }
+        function multiply(){axios.post('http://localhost:3000/calculator/add/multiply',{
+            num1: document.getElementById('1').value,
+            num2: document.getElementById('2').value
+        })    .then((response) => {
+        console.log(response.data)
+    })
+    }
+        function divide(){axios.post('http://localhost:3000/calculator/add/divide',{
+            num1: document.getElementById('1').value,
+            num2: document.getElementById('2').value
+        })    .then((response) => {
+        console.log(response.data)
+    })
+    }
+        function remainder(){axios.post('http://localhost:3000/calculator/add/remainder',{
+            num1: document.getElementById('1').value,
+            num2: document.getElementById('2').value
+        })    .then((response) => {
+        console.log(response.data)
+    })
+    }
+    </script>
+</html>
